@@ -60,7 +60,7 @@ interface WorldProps {
   data: Position[];
 }
 
-const numbersOfRings = [0];
+// const numbersOfRings = [0];
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
@@ -123,7 +123,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     const points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
+      // const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
@@ -283,12 +283,12 @@ export function World(props: WorldProps) {
 }
 
 export function hexToRgb(hex: string) {
-  let shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
     return r + r + g + g + b + b;
   });
 
-  let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),
