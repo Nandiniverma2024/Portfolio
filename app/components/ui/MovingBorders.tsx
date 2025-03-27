@@ -1,5 +1,5 @@
 "use client";
-import React, { RefObject } from "react";
+import React from "react";
 import {
   motion,
   useAnimationFrame,
@@ -81,7 +81,7 @@ export const MovingBorder = ({
   duration?: number;
   rx?: string;
   ry?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
   const pathRef = useRef<SVGRectElement | null>(null);
   const progress = useMotionValue<number>(0);
