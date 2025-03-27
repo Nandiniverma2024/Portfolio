@@ -167,7 +167,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
       .arcColor((t: number) => { 
         console.log(t); 
-        return t.toString(); //Now returns a string
+        return t.toString(); //
+        // Now returns a string
      })     
       .arcAltitude((e) => (e as { arcAlt: number }).arcAlt * 1)
       .arcStroke(() => [0.32, 0.28, 0.3][Math.round(Math.random() * 2)])
@@ -310,7 +311,7 @@ export function genRandomNumbers(min: number, max: number, count: number) {
 
   return arr;
 }
-function someColorFunction(t: number) {
-  throw new Error("Function not implemented.");
-}
+// function someColorFunction(t: number) {
+//   throw new Error("Function not implemented.");
+// }
 
