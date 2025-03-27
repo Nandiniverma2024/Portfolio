@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 
 // representation of globe component within the grid(this whole file code)
