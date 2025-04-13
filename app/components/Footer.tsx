@@ -2,7 +2,6 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./ui/MagicButton";
-import { a } from "motion/react-client";
 // import Image from "next/image";
 
 
